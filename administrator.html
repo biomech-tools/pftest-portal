@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>新体力テストデータ管理システム｜管理者用</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font-family: sans-serif; margin: 0; padding: 0; }
+header { background: #006600; color: white; padding: 12px; }
+nav { background: #eee; padding: 10px; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: #006600; font-weight: bold; }
+section { padding: 20px; line-height: 1.8; }
+
+/* 本文を囲む情報ボックス */
+.info-box {
+  background: #fff8dc; /* 落ち着いたクリーム色 */
+  border: 1px solid #e0d8b0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* 画像キャプション */
+.caption {
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #003399;
+  margin-top: 10px;
+}
+
+/* PC では小さめ、スマホでは大きめ */
+img {
+  width: 40%;
+  height: auto;
+  border: 1px solid #ccc;
+  display: block;
+  margin: 10px 0;
+}
+@media (max-width: 600px) {
+  img { width: 80%; }
+}
+
+/* 管理者操作リスト */
+.operation-list {
+  margin-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+.operation-list li {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  background: #f7f7f7;
+  border-left: 5px solid #006600;
+  border-radius: 4px;
+}
+.operation-title {
+  font-weight: bold;
+  color: #004400;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>新体力テストデータ管理システム（管理者用）</h1>
+</header>
+
+<nav>
+  <a href="student.html">新体力テストを受けた人</a>
+  <a href="administrator.html">管理者</a>
+  <a href="https://www.mext.go.jp/a_menu/sports/stamina/05030101/002.pdf" target="_blank">
+    新体力テスト実施要項（12～19歳対象）
+  </a>
+</nav>
+
+<section>
+
+<h2>管理者へ</h2>
+
+<div class="info-box">
+  管理者は最初に<strong>管理者ログインボタン</strong>を押下し、ログインのための<strong>新規登録</strong>を行う。  
+  新規登録には<strong>招待コード</strong>が必要であり、既定のコードを入力後、メールアドレスとパスワードを設定する。
+</div>
+
+<p>
+<strong>データ管理システムのURL</strong><br>
+<a href="https://fki-kosen-pftest.netlify.app/" target="_blank">
+https://fki-kosen-pftest.netlify.app/
+</a>
+</p>
+
+<div class="caption">新規登録画面</div>
+<img src="touroku.jpg" alt="新規登録画面">
+
+<div class="info-box">
+  登録が完了すると、ログインタブからメールアドレスとパスワードを入力してログインする。
+</div>
+
+<div class="caption">ログイン画面</div>
+<img src="login.jpg" alt="ログイン画面">
+
+<div class="caption">管理者パネル</div>
+<img src="admin.jpg" alt="管理者パネル">
+
+<h2>管理者が行える操作</h2>
+
+<ul class="operation-list">
+
+  <li>
+    <div class="operation-title">1. 年度切替</div>
+    過去の年度を選択し、その年度のデータを参照または追加できる。
+  </li>
+
+  <li>
+    <div class="operation-title">2. データをダウンロード</div>
+    学科・学年を指定して、該当データを CSV 形式でダウンロードする。
+  </li>
+
+  <li>
+    <div class="operation-title">3. 学年・学科毎の統計データ出力</div>
+    全学科・全学年の平均値および標準偏差を CSV 形式で出力する。
+  </li>
+
+  <li>
+    <div class="operation-title">4. データ修正・削除</div>
+    学年・学科・出席番号を指定してデータを呼び出し、修正または削除が可能。
+  </li>
+
+  <li>
+    <div class="operation-title">5. すべてのデータの削除</div>
+    選択中の年度に保存されている全データを一括削除する。
+  </li>
+
+  <li>
+    <div class="operation-title">6. パスワード変更</div>
+    管理者アカウントのパスワードを変更する。
+  </li>
+
+</ul>
+
+</section>
+
+</body>
+</html>
